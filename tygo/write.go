@@ -87,7 +87,9 @@ func (g *PackageGenerator) writeType(
 		g.writeIndent(s, depth+1)
 		s.WriteByte('}')
 	case *ast.Ident:
-		if t.String() == "any" {
+		if mappedTsType, ok := g.conf.IdentMappings[t.Name]; ok {
+			s.WriteString(mappedTsType)
+		} else if t.String() == "any" {
 			s.WriteString(getIdent(g.conf.FallbackType))
 		} else {
 			s.WriteString(getIdent(t.String()))
