@@ -2,6 +2,8 @@ module github.com/srliao/tygo
 
 go 1.18
 
+replace github.com/gzuidhof/tygo => ./
+
 require (
 	github.com/gzuidhof/tygo v0.2.17
 	github.com/spf13/cobra v1.3.0

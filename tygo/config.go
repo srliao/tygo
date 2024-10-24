@@ -27,7 +27,7 @@ type PackageConfig struct {
 	TypeMappings map[string]string `yaml:"type_mappings"`
 
 	// Specify custom mapping for specific idents
-	IdentMappings map[string]string `yaml:"indent_mappings"`
+	IdentMappings map[string]string `yaml:"ident_mappings"`
 
 	// This content will be put at the top of the output Typescript file.
 	// You would generally use this to import custom types.
